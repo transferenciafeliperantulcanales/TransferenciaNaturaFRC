@@ -9,26 +9,26 @@
   <link rel="icon" href="https://images.ctfassets.net/wtpc7vtprhhe/6G5iI1R2jK2yY62g0k86e6/1c828e8d8d7b322e70e7e0e7e108848f/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      /* Ambiente natural y sofisticado con tonos tierra, arena y acentos ecológicos de la marca */
-      background-color: #f7f3ed;
+      /* Ambiente premium inspirado en la identidad visual de Natura Chile: tonos naturales, suaves y orgánicos */
+      background-color: #f4f0ea;
       background-image: 
-        radial-gradient(#e5dbcc 1.5px, transparent 1.5px),
-        radial-gradient(#e5dbcc 1.5px, #f7f3ed 1.5px);
-      background-size: 32px 32px;
-      background-position: 0 0, 16px 16px;
-      color: #2c3531;
+        radial-gradient(#e2d7c7 1px, transparent 1px),
+        radial-gradient(#e2d7c7 1px, #f4f0ea 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      color: #2b332f;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 24px;
       overflow-x: hidden;
     }
 
@@ -40,57 +40,69 @@
       text-align: center;
     }
 
-    /* Cabecera elegante inspirada en la marca */
+    /* Cabecera elegante y marcada con la identidad de marca */
     .header-natura {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      background: #ffffff;
+      padding: 12px 28px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(43, 51, 47, 0.08);
+      border: 1px solid #ebe4d8;
     }
 
     .logo-natura {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      color: #ff6a00;
-      letter-spacing: 4px;
+      color: #ff6200; /* Naranja corporativo vibrante de Natura */
+      letter-spacing: 5px;
       text-transform: lowercase;
-      text-shadow: 0 2px 10px rgba(255, 106, 0, 0.15);
+      line-height: 1;
     }
 
     .subtitulo-principal {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 3px;
       color: #ffffff;
-      background: linear-gradient(135deg, #2d4436, #1e2e24);
-      border-radius: 20px;
-      padding: 8px 20px;
+      background: linear-gradient(135deg, #2b4436, #1b2c22); /* Verde hoja profundo muy característico */
+      border-radius: 30px;
+      padding: 8px 22px;
       text-transform: uppercase;
-      box-shadow: 0 4px 15px rgba(45, 68, 54, 0.2);
+      box-shadow: 0 4px 15px rgba(43, 68, 54, 0.25);
     }
 
-    /* Tarjetas con estilo orgánico y bordes suaves */
+    /* Tarjetas de datos con diseño moderno flotante */
     .contenedor-tarjetas {
       display: flex;
       flex-direction: column;
       margin-bottom: 24px;
-      background-color: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
+      background-color: #ffffff;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(44, 53, 49, 0.08);
-      border: 1px solid rgba(229, 219, 204, 0.8);
+      box-shadow: 0 20px 40px rgba(43, 51, 47, 0.08);
+      border: 1px solid #ebe4d8;
       text-align: left;
     }
 
     .tarjeta {
       background-color: transparent;
-      border-bottom: 1px solid #f2ece4;
-      padding: 15px 22px;
+      border-bottom: 1px solid #f5f1eb;
+      padding: 16px 22px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .tarjeta:hover {
+      background-color: #faf8f5;
     }
 
     .tarjeta:last-child { border-bottom: none; }
@@ -98,48 +110,48 @@
     .etiqueta {
       font-size: 0.65rem;
       font-weight: 500;
-      color: #8a7d72;
+      color: #8c7d70;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
     }
 
     .valor {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 600;
-      color: #1f2724;
+      color: #1a231f;
       word-break: break-all;
       line-height: 1.4;
     }
 
-    /* Botón principal orgánico y llamativo */
+    /* Botón principal estilizado con degradado y efectos de profundidad */
     .btn-copiar {
       width: 100%;
-      background: linear-gradient(135deg, #ff6a00, #e65c00);
+      background: linear-gradient(135deg, #ff6200, #e05500);
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       color: #ffffff;
       border: none;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 18px 16px;
       font-size: 0.82rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 8px 25px rgba(255, 106, 0, 0.35);
+      box-shadow: 0 10px 25px rgba(255, 98, 0, 0.35);
       transition: all 0.2s ease;
       text-align: center;
     }
 
     .btn-copiar:hover {
-      background: linear-gradient(135deg, #e65c00, #cc5200);
+      background: linear-gradient(135deg, #e05500, #c44a00);
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(255, 106, 0, 0.45);
+      box-shadow: 0 14px 30px rgba(255, 98, 0, 0.45);
     }
 
     .btn-copiar:active {
       transform: translateY(0);
-      box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3);
     }
 
     .mensaje {
@@ -150,13 +162,13 @@
       transform: translate(-50%, -50%);
       z-index: 9999;
       color: #ffffff;
-      background-color: #2d4436;
+      background-color: #2b4436;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 16px 26px;
       font-size: 0.85rem;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
       text-align: center;
     }
   </style>
@@ -165,7 +177,9 @@
 
   <div class="wrapper">
     <div class="header-natura">
-      <div class="logo-natura">natura</div>
+      <div class="logo-badge">
+        <div class="logo-natura">natura</div>
+      </div>
       <div class="subtitulo-principal">Consultoría Oficial</div>
     </div>
 
@@ -185,6 +199,6 @@
 
   <div id="mensaje-flotante" class="mensaje">¡Datos copiados!</div>
 
-  <script src="script.js?v=natura5"></script>
+  <script src="script.js?v=natura6"></script>
 </body>
 </html>
