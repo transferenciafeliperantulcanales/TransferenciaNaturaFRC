@@ -9,14 +9,13 @@
   <link rel="icon" href="https://images.ctfassets.net/wtpc7vtprhhe/6G5iI1R2jK2yY62g0k86e6/1c828e8d8d7b322e70e7e0e7e108848f/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      /* Fondo naranjo tenue, suave y armonioso */
       background-color: #ff9e6c;
       background-image: linear-gradient(135deg, #ffab7d 0%, #f48248 100%);
       color: #ffffff;
@@ -36,18 +35,17 @@
       text-align: center;
     }
 
-    /* Cabecera corporativa con el logo oficial */
+    /* Cabecera optimizada solo con el logo oficial */
     .header-natura {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
     }
 
     .logo-badge {
       background: #ffffff;
-      padding: 16px 24px;
+      padding: 16px 28px;
       border-radius: 20px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -59,18 +57,6 @@
       max-height: 55px;
       width: auto;
       object-fit: contain;
-    }
-
-    .subtitulo-principal {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      color: #e65500;
-      background-color: #ffffff;
-      border-radius: 30px;
-      padding: 8px 22px;
-      text-transform: uppercase;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
     /* Tarjetas de datos limpias y modernas */
@@ -112,35 +98,35 @@
       line-height: 1.4;
     }
 
-    /* Botón principal */
+    /* Botón destacado, llamativo y optimizado para interacción táctil en móviles */
     .btn-copiar {
       width: 100%;
-      background-color: #ffffff;
+      background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      color: #e65500;
-      border: none;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 16px;
-      padding: 18px 16px;
-      font-size: 0.82rem;
+      padding: 20px 16px;
+      font-size: 0.88rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      transition: all 0.2s ease;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      transition: all 0.15s ease;
       text-align: center;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .btn-copiar:hover {
-      background-color: #fff6f2;
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
 
     .btn-copiar:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: scale(0.97);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
     .mensaje {
@@ -169,11 +155,10 @@
       <div class="logo-badge">
         <img src="logo.png" alt="Natura Logo" class="logo-img">
       </div>
-      <div class="subtitulo-principal">Consultoría Oficial</div>
     </div>
 
     <div class="contenedor-tarjetas">
-      <div class="tarjeta"><span class="etiqueta">Titular / Razón Social:</span><span class="valor">Felipe Ignacio Rantul Canales</span></div>
+      <div class="tarjeta"><span class="etiqueta">Titular:</span><span class="valor">Felipe Ignacio Rantul Canales</span></div>
       <div class="tarjeta"><span class="etiqueta">RUT:</span><span class="valor">20.254.963-2</span></div>
       <div class="tarjeta"><span class="etiqueta">Banco:</span><span class="valor">Banco Santander</span></div>
       <div class="tarjeta"><span class="etiqueta">Tipo de Cuenta:</span><span class="valor">Cuenta Corriente</span></div>
@@ -182,12 +167,12 @@
     </div>
 
     <button class="btn-copiar" onclick="copiarDatos()">
-      Copiar datos de transferencia
+      📋 Copiar datos de transferencia
     </button>
   </div>
 
   <div id="mensaje-flotante" class="mensaje">¡Datos copiados!</div>
 
-  <script src="script.js?v=natura9"></script>
+  <script src="script.js?v=natura10"></script>
 </body>
 </html>
