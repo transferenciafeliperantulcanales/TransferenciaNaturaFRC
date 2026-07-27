@@ -9,14 +9,14 @@
   <link rel="icon" href="https://images.ctfassets.net/wtpc7vtprhhe/6G5iI1R2jK2yY62g0k86e6/1c828e8d8d7b322e70e7e0e7e108848f/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      /* Fondo principal color naranjo vibrante característico de Natura */
+      /* Fondo principal con el tono naranja característico de la marca */
       background-color: #ff6200;
       background-image: linear-gradient(135deg, #ff7a1a 0%, #e65500 100%);
       color: #ffffff;
@@ -36,35 +36,35 @@
       text-align: center;
     }
 
-    /* Cabecera con el logo de Natura destacado */
+    /* Cabecera corporativa con el logo oficial */
     .header-natura {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .logo-badge {
       background: #ffffff;
-      padding: 16px 36px;
-      border-radius: 50px;
+      padding: 16px 24px;
+      border-radius: 20px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .logo-natura {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #ff6200;
-      letter-spacing: 6px;
-      text-transform: lowercase;
-      line-height: 1;
+    .logo-img {
+      max-height: 55px;
+      width: auto;
+      object-fit: contain;
     }
 
     .subtitulo-principal {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 3px;
+      letter-spacing: 2.5px;
       color: #ff6200;
       background-color: #ffffff;
       border-radius: 30px;
@@ -73,7 +73,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    /* Tarjetas de datos */
+    /* Tarjetas de datos limpias y modernas */
     .contenedor-tarjetas {
       display: flex;
       flex-direction: column;
@@ -122,7 +122,7 @@
       border: none;
       border-radius: 16px;
       padding: 18px 16px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       cursor: pointer;
@@ -167,7 +167,7 @@
   <div class="wrapper">
     <div class="header-natura">
       <div class="logo-badge">
-        <div class="logo-natura">natura</div>
+        <img src="logo.png" alt="Natura Logo" class="logo-img">
       </div>
       <div class="subtitulo-principal">Consultoría Oficial</div>
     </div>
@@ -188,6 +188,6 @@
 
   <div id="mensaje-flotante" class="mensaje">¡Datos copiados!</div>
 
-  <script src="script.js?v=natura7"></script>
+  <script src="script.js?v=natura8"></script>
 </body>
 </html>
