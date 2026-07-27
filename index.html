@@ -35,7 +35,6 @@
       text-align: center;
     }
 
-    /* Cabecera optimizada solo con el logo oficial */
     .header-natura {
       margin-bottom: 24px;
       display: flex;
@@ -59,11 +58,10 @@
       object-fit: contain;
     }
 
-    /* Tarjetas de datos limpias y modernas */
     .contenedor-tarjetas {
       display: flex;
       flex-direction: column;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       background-color: #ffffff;
       border-radius: 24px;
       overflow: hidden;
@@ -98,36 +96,46 @@
       line-height: 1.4;
     }
 
-    /* Botón original con el estilo corporativo pero con volumen, sombra marcada y mejor presencia táctil móvil */
+    /* Botón flotante con volumen, sombra profunda y brillo táctil */
     .btn-copiar {
       width: 100%;
-      background-color: #ffffff;
+      background: #ffffff;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       color: #e65500;
-      border: none;
-      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
       padding: 20px 16px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-      transition: all 0.15s ease;
+      /* Sombra intensa multicapa para dar efecto de relieve flotante */
+      box-shadow: 
+        0 14px 28px rgba(180, 50, 0, 0.35), 
+        0 6px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
       text-align: center;
       -webkit-tap-highlight-color: transparent;
+      overflow: hidden;
     }
 
+    /* Sombra de acento interna y resplandor al interactuar */
     .btn-copiar:hover {
-      background-color: #fff6f2;
-      transform: translateY(-2px);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+      background-color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 
+        0 20px 38px rgba(180, 50, 0, 0.45), 
+        0 10px 16px rgba(0, 0, 0, 0.2);
     }
 
+    /* Feedback de pulso táctil inmediato al presionar en celular */
     .btn-copiar:active {
-      transform: scale(0.97);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transform: translateY(1px) scale(0.97);
+      box-shadow: 
+        0 6px 14px rgba(180, 50, 0, 0.3), 
+        0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     .mensaje {
@@ -159,7 +167,7 @@
     </div>
 
     <div class="contenedor-tarjetas">
-      <div class="tarjeta"><span class="etiqueta">Titular / Razón Social:</span><span class="valor">Felipe Ignacio Rantul Canales</span></div>
+      <div class="tarjeta"><span class="etiqueta">Titular:</span><span class="valor">Felipe Ignacio Rantul Canales</span></div>
       <div class="tarjeta"><span class="etiqueta">RUT:</span><span class="valor">20.254.963-2</span></div>
       <div class="tarjeta"><span class="etiqueta">Banco:</span><span class="valor">Banco Santander</span></div>
       <div class="tarjeta"><span class="etiqueta">Tipo de Cuenta:</span><span class="valor">Cuenta Corriente</span></div>
@@ -174,6 +182,6 @@
 
   <div id="mensaje-flotante" class="mensaje">¡Datos copiados!</div>
 
-  <script src="script.js?v=natura11"></script>
+  <script src="script.js?v=natura12"></script>
 </body>
 </html>
