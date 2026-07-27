@@ -1,5 +1,5 @@
 function copiarDatos() {
-  // Recopila los valores directamente de las tarjetas de la página
+  // Extrae únicamente los valores importantes sin títulos ni etiquetas
   const titular = document.querySelectorAll('.valor')[0].innerText;
   const rut = document.querySelectorAll('.valor')[1].innerText;
   const banco = document.querySelectorAll('.valor')[2].innerText;
@@ -7,16 +7,15 @@ function copiarDatos() {
   const nroCuenta = document.querySelectorAll('.valor')[4].innerText;
   const correo = document.querySelectorAll('.valor')[5].innerText;
 
-  // Formato limpio de texto para transferencias
+  // Estructura limpia que se copiará al portapapeles
   const textoACopiar = 
-`Titular: ${titular}
-RUT: ${rut}
-Banco: ${banco}
-Tipo de Cuenta: ${tipoCuenta}
-Número de Cuenta: ${nroCuenta}
-Correo: ${correo}`;
+`${titular}
+${rut}
+${banco}
+${tipoCuenta}
+${nroCuenta}
+${correo}`;
 
-  // Copia al portapapeles
   navigator.clipboard.writeText(textoACopiar).then(() => {
     mostrarMensaje();
   }).catch(err => {
