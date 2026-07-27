@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
 
+  <title>Datos de Transferencia - Natura</title>
+  <link rel="icon" href="https://images.ctfassets.net/wtpc7vtprhhe/6G5iI1R2jK2yY62g0k86e6/1c828e8d8d7b322e70e7e0e7e108848f/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      /* Ambiente corporativo Natura: fondo cálido inspirada en la paleta de la marca (arena suave y acentos terracota) */
+      background-color: #faf6f0;
+      background-image: radial-gradient(#e8dcd0 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .wrapper { 
+      width: 100%; 
+      max-width: 460px; 
+      position: relative; 
+      z-index: 2; 
+      text-align: center;
+    }
+
+    /* Cabecera estilo marca Natura */
+    .header-natura {
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-natura {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: e65c00;
+      text-transform: lowercase;
+    }
+
+    .subtitulo-principal {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ff7a00, #e65c00);
+      border-radius: 30px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(230, 92, 0, 0.25);
+    }
+
+    .contenedor-tarjetas {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0e6dc;
+      text-align: left;
+    }
+
+    .tarjeta {
+      background-color: #ffffff;
+      border-bottom: 1px solid #f7f2ed;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tarjeta:last-child { border-bottom: none; }
+
+    .etiqueta {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: #8c7b70;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .valor {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2b2b2b;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    .btn-copiar {
+      width: 100%;
+      background: linear-gradient(135deg, #ff7a00, #e65c00);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 18px 16px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(230, 92, 0, 0.3);
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-copiar:hover {
+      background: linear-gradient(135deg, #e65c00, #cc5200);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(230, 92, 0, 0.4);
+    }
+
+    .btn-copiar:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(230, 92, 0, 0.3);
+    }
+
+    .mensaje {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      color: #ffffff;
+      background-color: #2b2b2b;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-size: 0.85rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="header-natura">
+      <div style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700; color: #e65c00; letter-spacing: 2px;">natura</div>
+      <div class="subtitulo-principal">Consultoría de Belleza</div>
+    </div>
+
+    <div class="contenedor-tarjetas">
+      <div class="tarjeta"><span class="etiqueta">Titular / Razón Social:</span><span class="valor">Felipe Ignacio Rantul Canales</span></div>
+      <div class="tarjeta"><span class="etiqueta">RUT:</span><span class="valor">20.254.963-2</span></div>
+      <div class="tarjeta"><span class="etiqueta">Banco:</span><span class="valor">Banco Santander</span></div>
+      <div class="tarjeta"><span class="etiqueta">Tipo de Cuenta:</span><span class="valor">Cuenta Corriente</span></div>
+      <div class="tarjeta"><span class="etiqueta">Número de Cuenta:</span><span class="valor">000074818609</span></div>
+      <div class="tarjeta"><span class="etiqueta">Correo:</span><span class="valor">felipe.rc9@icloud.com</span></div>
+    </div>
+
+    <button class="btn-copiar" onclick="copiarDatos()">
+      Copiar datos de transferencia
+    </button>
+  </div>
+
+  <div id="mensaje-flotante" class="mensaje">¡Datos copiados!</div>
+
+  <script src="script.js?v=natura3"></script>
+</body>
+</html>
